@@ -1,3 +1,6 @@
+<!-- connect with php file -->
+<?php include '/assets/php/form.php' ?>
+
 <!DOCTYPE HTML>
 <!--
 	Massively by HTML5 UP
@@ -13,6 +16,8 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+
+	<?php include('"assets/php/form.php"'); ?>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -47,30 +52,29 @@
 
 					</div>
 
-			<section class="post featured">
+				
 
 				<!-- Footer -->
 					<footer id="footer">
 						<section >
-							<form action="https://formsubmit.co/sayalisdhavale@gmail.com" method="POST">
+							<form action="https://formspree.io/f/mbjnljwa" method="POST" id="request-form">
 								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
+									<div class="field name">
+										<input type="text" placeholder="Name" id="clientName" name="clientName" required>
 									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
+									<div class="field email">
+										<input type="email" placeholder="Email" id="clientEmail" name="clientEmail" required>
 									</div>
 								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
+								<div class="field">
+									<input type="text" placeholder="Subject" id="subject" name="subject" required>
+								</div>
+								<div class="field textarea">
+									<textarea cols="30" rows="10" placeholder="Message.." id="message" name="message" required></textarea>
+								</div>
+								<button type="submit" class="btn button primary-button text-uppercase" style="width: 100%;">Send</button>
 							</form>
+						</section>
 						</section>
 						<section class="split contact">
 							<section class="alt">
@@ -105,7 +109,7 @@
 					</div>
 
 			</div>
-			</section>
+		
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
